@@ -1,0 +1,117 @@
+
+
+GET http://localhost:5000/
+
+
+###Register User
+
+POST  http://localhost:5000/api/user/
+Content-Type: application/json
+
+{
+"name": "testuser1",
+"email": "testuser1@example.com",
+"password": "password123",
+"phone": "1234567890",
+"is_admin": false
+}
+
+### Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser1@example.com",
+  "password": "password123"
+}
+
+### logout user
+
+GET  http://localhost:5000/api/auth/logout
+Content-Type: application/json
+
+
+### Login User admin
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "afzal@gmail.com",
+  "password": "afzal123"
+} 
+
+###
+GET  http://localhost:5000/api/user/67b7322e9e61cc22f8712e4d
+Content-Type: application/json
+
+
+
+### get all users
+GET  http://localhost:5000/api/user/
+Content-Type: application/json
+
+
+### delete users
+DELETE   http://localhost:5000/api/user/67b782505460ea1fbca2392b
+Content-Type: application/json
+
+###Create Train
+
+POST http://localhost:5000/api/train/
+Content-Type: application/json
+
+{
+"name": "Express Train",
+"destination": "City B",
+"startpoint": "City A",
+"startDate": "2025-02-25",
+"reachDate": "2025-02-26",
+"price": 100
+}
+
+###Get All Trains
+
+GET http://localhost:5000/api/train/
+Content-Type: application/json
+
+
+###Get Train by ID
+
+GET http://localhost:5000/api/train/67b73d515460ea1fbc9f98ff
+Content-Type: application/json
+
+###Delete Train
+
+DELETE http://localhost:5000/api/train/
+Content-Type: application/json
+
+{
+"id": "67b79b245460ea1fbca2526e"
+}
+
+###Book Ticket
+
+POST http://localhost:5000/api/book/
+Content-Type: application/json
+
+{
+"train_id": "67b73d515460ea1fbc9f98ff",
+"user_id": "67b734f15460ea1fbc9ea24e"
+}
+
+###Get All Bookings
+
+GET http://localhost:5000/api/book/
+Content-Type: application/json
+
+
+###Get Booking by ID
+
+GET http://localhost:5000/api/book/67b79ce15460ea1fbca25278
+Content-Type: application/json
+
+###Delete Booking
+
+DELETE http://localhost:5000/api/book/67b79ce15460ea1fbca25278
+Content-Type: application/json
+
